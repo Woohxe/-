@@ -39,10 +39,9 @@
 <script type="text/javascript">
   var bdTTS;
   apiready = function(){
-    var bdTTS = api.require('bdTTS');
+    bdTTS = api.require('bdTTS');
     bdTTS.init({
-        mode:'MIX',
-        speed:'7'
+        mode:'MIX'
     },function(ret){
         alert(JSON.stringify(ret));
     });
