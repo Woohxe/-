@@ -10,19 +10,22 @@
   height: 18rem;
   word-wrap:break-word;
 }
-.start,.end{
+.start,.end,.clear{
   margin: 0 auto;
-  height: 1.8rem;
+  height: 2rem;
   width: 14rem;
   text-align: center;
   border-radius: 0.5rem;
   background-color: #00acc1;
-  line-height: 1.5rem;
+  line-height: 2rem;
   font-size: 1.3rem;
   color: white;
   cursor: pointer;
 }
-.end{
-  background: #e51c23;
+.end,.clear{
+  background-color: #e51c23;
   margin:0.5rem auto;
+}
+.clear{
+  background-color: green;
 }

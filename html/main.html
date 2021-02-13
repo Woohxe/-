@@ -22,6 +22,7 @@
     </section>
     <div class="start" tapmode onclick="startFunc();">播&nbsp;&nbsp;放</div>
     <div class="end" tapmode onclick="endFunc();">暂&nbsp;&nbsp;停</div>
+    <div class="clear" tapmode onclick="clearFunc();">清&nbsp;&nbsp;空</div>
 </body>
 </html>
 <script type="text/javascript" src="../script/api.js"></script>
@@ -36,17 +37,25 @@
   }
   function startFunc(){
       var text=$api.byId('textArea').value;
-      bdTTS.speak({
-          text:text
-      },function(ret){
-        flag=0;
-      });
+      result1 = text.replace(/[\r\n]/g,"");//去掉回车
+      result2 = result1.replace(/[ ]/g,"");//去掉空格
+      var numlist = result2.match(/.{1,50}/g)
+      for (var i=0;i<numlist.length;i++){
+        bdTTS.speak({
+            text:numlist[i]
+        },function(ret){
+
+        });
+      }
   }
   function endFunc(){
       var text=$api.byId('textArea').value;
       bdTTS.speakPause(function(ret){
           // alert(JSON.stringify(ret));
       });
+  }
+  function clearFunc(){
+    $api.byId('textArea').value="";
   }
 
 </script>
