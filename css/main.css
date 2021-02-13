@@ -9,6 +9,7 @@
   margin: 1rem auto;
   height: 18rem;
   word-wrap:break-word;
+  -webkit-user-select:all;
 }
 .start{
   margin: 0 auto;
