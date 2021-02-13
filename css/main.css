@@ -1,0 +1,17 @@
+.content{
+  margin: 0 auto;
+  height: 20rem;
+  border: 10px solid #ffffff;
+  text-align: center;
+}
+.start{
+  margin: 0 auto;
+  height: 2rem;
+  width: 10rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #00acc1;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  color: white;
+}
