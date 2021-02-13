@@ -27,5 +27,5 @@
 	<permission name="fileSystem" />
 	<permission name="internet" />
 	<permission name="bootCompleted" />
-	<permission name="hardware" />
+	<permission name="hardware" />  <feature name="bdTTS">    <param  name="appId_iOS" value="23660401"/>    <param  name="apiKey_iOS" value="dU99CNNu72MKMsoIsYMpF3vo"/>     <param  name="secretKey_iOS" value="KVR3cuFHiSIgowk7DLm4HkMWTnB9UkHp"/>    <param  name="appId_android" value="23660401"/>    <param  name="apiKey_android" value="dU99CNNu72MKMsoIsYMpF3vo"/>     <param  name="secretKey_android" value="KVR3cuFHiSIgowk7DLm4HkMWTnB9UkHp"/>  </feature>
 </widget>

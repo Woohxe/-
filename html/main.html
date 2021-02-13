@@ -37,24 +37,22 @@
 </html>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
-  var ttsModule;
+  var bdTTS;
   apiready = function(){
-    ttsModule=api.require('ttsModule');
+    var bdTTS = api.require('bdTTS');
+    bdTTS.init({
+        mode:'MIX',
+        speed:'7'
+    },function(ret){
+        alert(JSON.stringify(ret));
+    });
   }
   function startFunc(){
     var text=$api.byId('textArea').value;
-    ttsModule.initTts({
-      language: 0,
-      str: text,
-      speechRate: 0.8
-    }, function(ret, err) {
-      if (ret) {
-          alert(JSON.stringify(ret));
-      } else {
-          alert(JSON.stringify(err));
-      }
+    bdTTS.speak({
+        text:text
+    },function(ret){
+        alert(JSON.stringify(ret));
     });
-    ttsModule.speakTts();
-    alert(text);
   }
 </script>
