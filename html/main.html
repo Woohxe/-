@@ -34,29 +34,27 @@
     </section>
     <div class="start" tapmode onclick="startFunc();">播&nbsp;放</div>
 </body>
+</html>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
-    var ttsModule;
-    apiready = function() {
-     var ttsModule=api.require('ttsModule');
-    };
-
-    function startFunc(){
-      var text=$api.byId('textArea').value;
-      ttsModule.initTts({
-        language: 0,
-        str: text,
-        speechRate: 0.8
-      }, function(ret, err) {
-        if (ret) {
-            alert(JSON.stringify(ret));
-        } else {
-            alert(JSON.stringify(err));
-        }
-      });
-      ttsModule.speakTts();
-      alert(text);
-    }
+  var ttsModule;
+  apiready = function(){
+    ttsModule=api.require('ttsModule');
+  }
+  function startFunc(){
+    var text=$api.byId('textArea').value;
+    ttsModule.initTts({
+      language: 0,
+      str: text,
+      speechRate: 0.8
+    }, function(ret, err) {
+      if (ret) {
+          alert(JSON.stringify(ret));
+      } else {
+          alert(JSON.stringify(err));
+      }
+    });
+    ttsModule.speakTts();
+    alert(text);
+  }
 </script>
-
-</html>
