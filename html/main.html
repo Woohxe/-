@@ -10,6 +10,11 @@
     <link rel="stylesheet" type="text/css" href="../css/aui.css" />
     <link rel="stylesheet" type="text/css" href="../css/main.css" />
 </head>
+<style>
+*{
+  -webkit-user-select:auto !important;
+}
+</style>
 
 <body>
     <section class="content">
@@ -21,6 +26,7 @@
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
   var bdTTS;
+  var flag=1;
   apiready = function(){
     bdTTS = api.require('bdTTS');
     bdTTS.init({
@@ -29,11 +35,20 @@
     });
   }
   function startFunc(){
-    var text=$api.byId('textArea').value;
-    bdTTS.speak({
-        text:text
-    },function(ret){
+    if(flag==1){
+      var text=$api.byId('textArea').value;
+      bdTTS.speak({
+          text:text
+      },function(ret){
+        flag=0;
+      });
+    }
+    else{
+      bdTTS.speakPause(function(ret){
+        flag=1;
+          // alert(JSON.stringify(ret));
+      });
+    }
 
-    });
   }
 </script>
