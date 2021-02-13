@@ -1,13 +1,19 @@
 .content{
-  margin: 0 auto;
+  margin: 2rem auto 0;
   height: 20rem;
   border: 10px solid #ffffff;
   text-align: center;
 }
+#textArea{
+  width: 15rem;
+  margin: 1rem auto;
+  height: 18rem;
+  word-wrap:break-word;
+}
 .start{
   margin: 0 auto;
   height: 2rem;
-  width: 10rem;
+  width: 20rem;
   text-align: center;
   border-radius: 0.5rem;
   background-color: #00acc1;

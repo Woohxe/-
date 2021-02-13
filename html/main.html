@@ -9,30 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../css/api.css" />
     <link rel="stylesheet" type="text/css" href="../css/aui.css" />
     <link rel="stylesheet" type="text/css" href="../css/main.css" />
-    <style>
-        label {
-            margin: 10px;
-            font-size: 24px;
-        }
-
-        ul {
-            margin-bottom: 10px;
-        }
-
-        ul li {
-            margin: 5px 10px;
-            padding: 5px;
-            color: #000;
-            word-wrap: break-word;
-        }
-    </style>
 </head>
 
 <body>
     <section class="content">
-      <input type="textarea" class=".aui-input" id="textArea" placeholder="请将文字粘贴在此处"/>
+      <textarea class=".aui-input" id="textArea" placeholder="请将文字粘贴在此处"></textarea>
     </section>
-    <div class="start" tapmode onclick="startFunc();">播&nbsp;放</div>
+    <div class="start" tapmode onclick="startFunc();">播&nbsp;&nbsp;放</div>
 </body>
 </html>
 <script type="text/javascript" src="../script/api.js"></script>
@@ -41,9 +24,9 @@
   apiready = function(){
     bdTTS = api.require('bdTTS');
     bdTTS.init({
-        mode:'MIX'
+        mode:'MIX',
+        speed:'7'
     },function(ret){
-        alert(JSON.stringify(ret));
     });
   }
   function startFunc(){
@@ -51,7 +34,7 @@
     bdTTS.speak({
         text:text
     },function(ret){
-        alert(JSON.stringify(ret));
+
     });
   }
 </script>
